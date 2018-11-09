@@ -137,8 +137,8 @@ def most_popular_gender(data_list):
         String "Male" if number of "Males" > number of "Females".
         String "Female" if number of "Males" < number of "Females".
     """
-    cg = count_gender(data_list)
-    answer = "Equal" if cg[0] == cg[1] else ("Male" if cg[0] > cg[1] else "Female")
+    male, female = count_gender(data_list)
+    answer = "Equal" if male == female else ("Male" if male > female else "Female")
     return answer
 
 
