@@ -244,9 +244,10 @@ def get_median(number_list):
         The median of the numbers in number_list as a float
     """
     sorted_list = sorted([float(num) for num in number_list])
+    length = len(sorted_list)
     if len(sorted_list) % 2 == 0:
-        return sorted_list[len(sorted_list)//2 - 1] + sorted_list[len(l)//2] / 2
-    return float(sorted_list[len(sorted_list)//2 - 1])
+        return sorted_list[length//2 - 1] + sorted_list[length//2] / 2
+    return float(sorted_list[length//2 - 1])
 
 min_trip = get_min(trip_duration_list)
 max_trip = get_max(trip_duration_list)
